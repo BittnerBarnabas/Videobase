@@ -1,8 +1,9 @@
 # Videobase
 Project work for academic studies
-Hungarian description of the solved problem:
+
+#### Hungarian description of the solved problem:
 Készítsünk programot, amellyel egy videotéka nyilvántartását valósíthatjuk meg
-az alábbi **funkciókkal**:
+az alábbi funkciókkal:
 
 - [ ] A programban listázhatóak a filmek adatai (cím, főszereplők, rendező,
 forgalmazó, megjelenés éve), és látható, hogy kölcsönözve vannak-e, vagy
