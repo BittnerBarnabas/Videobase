@@ -1,10 +1,10 @@
-#include "View/videobase.h"
+#include "View/mainwindow.h"
 #include <QtWidgets/QApplication>
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	Videobase w;
+	MainWindow w;
 	w.show();
 	return a.exec();
 }

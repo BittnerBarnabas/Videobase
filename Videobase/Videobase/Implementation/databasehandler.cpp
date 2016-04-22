@@ -1,5 +1,4 @@
 #include "databasehandler.h"
-#include<QMessageBox>
 
 void SQLStorage::createSqlConnection()
 {
