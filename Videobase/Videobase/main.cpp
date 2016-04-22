@@ -1,4 +1,4 @@
-#include "videobase.h"
+#include "View/videobase.h"
 #include <QtWidgets/QApplication>
 
 int main(int argc, char *argv[])
