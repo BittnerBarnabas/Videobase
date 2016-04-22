@@ -33,13 +33,31 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+    <Filter Include="Implementation">
+      <UniqueIdentifier>{905d38d0-bf99-4460-971d-95316a0a7a2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{ff2e92e0-5b21-47d0-b8fc-330b0732bf50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementation\Header">
+      <UniqueIdentifier>{d72913ec-1914-4232-b470-0a3cfd67e984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Implementation\Source">
+      <UniqueIdentifier>{a4c8e9b9-51ad-49ad-9c84-9eb8f94afdd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Header">
+      <UniqueIdentifier>{a01d3e32-3a41-490b-b646-9731b2cf025e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Source">
+      <UniqueIdentifier>{3a439bea-3c29-4f45-886b-6466814466d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="videobase.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="View\videobase.cpp">
+      <Filter>View\Source</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_videobase.cpp">
       <Filter>Generated Files\Debug</Filter>
@@ -47,24 +65,24 @@
     <ClCompile Include="GeneratedFiles\Release\moc_videobase.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_videobase.cpp">
-      <Filter>Generated Files</Filter>
+    <ClCompile Include="Implementation\databasehandler.cpp">
+      <Filter>Implementation\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="videobase.h">
-      <Filter>Header Files</Filter>
+    <CustomBuild Include="View\videobase.ui">
+      <Filter>View</Filter>
     </CustomBuild>
-    <CustomBuild Include="videobase.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="videobase.qrc">
-      <Filter>Resource Files</Filter>
+    <CustomBuild Include="View\videobase.h">
+      <Filter>View\Header</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_videobase.h">
       <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Implementation\databasehandler.h">
+      <Filter>Implementation\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
