@@ -16,6 +16,5 @@ MainWindow::~MainWindow() {}
 
 void MainWindow::editMovies() {
   bookEditWidget = std::make_unique<bookEdit>();
-
   ui->controlLayout->addWidget(bookEditWidget.get());
 }
