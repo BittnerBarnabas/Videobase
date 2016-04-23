@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>bookEdit</class>
+ <widget class="QWidget" name="bookEdit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>924</width>
+    <height>638</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>bookEdit</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>721</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Movies</string>
+   </property>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>691</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Edit movie</string>
+    </property>
+    <widget class="QPushButton" name="buttonNewRow">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>151</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add new movie</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonDelRow">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>151</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delete current movie</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonRevert">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>50</y>
+       <width>156</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Revert changes</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonSubmit">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>50</y>
+       <width>102</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply changes</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTableView" name="TableDB">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>701</width>
+      <height>291</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

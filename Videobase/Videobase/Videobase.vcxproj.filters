@@ -71,12 +71,24 @@
     <ClCompile Include="View\mainwindow.cpp">
       <Filter>View\Source</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_bookedit.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_bookedit.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\bookedit.cpp">
+      <Filter>View\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Implementation\databasehandler.h">
       <Filter>Implementation\Header</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_mainwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_bookedit.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -86,6 +98,12 @@
     </CustomBuild>
     <CustomBuild Include="View\mainwindow.ui">
       <Filter>View\Forms</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\bookedit.ui">
+      <Filter>View\Forms</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\bookedit.h">
+      <Filter>View\Header</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>

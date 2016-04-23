@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <QMainWindow>
 #include <QSqlRelationalTableModel>
+#include "View/bookedit.h"
 #include <memory>
 namespace Ui {class MainWindow;}
 
@@ -10,8 +11,9 @@ class MainWindow : public QMainWindow {
 public:
 	MainWindow(QWidget * parent = Q_NULLPTR);
 	~MainWindow();
-	void populateDBTable();
+public slots:
+	void editMovies();
 private:
 	std::unique_ptr<Ui::MainWindow> ui;
-	std::unique_ptr<QSqlRelationalTableModel> tableModel; //!< QT model for connecting SQL and View
+	std::unique_ptr<bookEdit> bookEditWidget;
 };

@@ -15,3 +15,37 @@ void SQLStorage::createSqlConnection()
 	}
 
 }
+
+std::unique_ptr<QSqlRelationalTableModel> SQLStorage::createSQLModel()
+{
+	auto model = std::make_unique<QSqlRelationalTableModel>();
+	model->setEditStrategy(QSqlTableModel::OnManualSubmit);
+	return model;
+}
+
+std::unique_ptr<QSqlRelationalTableModel> SQLStorage::createBookeditModel()
+{
+	auto model = createSQLModel();
+	model->setEditStrategy(QSqlTableModel::OnManualSubmit);
+	model->setTable("movies");
+
+	model->select();
+	model->setHeaderData(model->fieldIndex("title"), Qt::Horizontal,
+							  "Title");
+	model->setHeaderData(model->fieldIndex("main_char"), Qt::Horizontal,
+							  "Main characters");
+	model->setHeaderData(model->fieldIndex("director"), Qt::Horizontal,
+							  "Director");
+	model->setHeaderData(model->fieldIndex("publisher"), Qt::Horizontal,
+							  "Publisher");
+	model->setHeaderData(model->fieldIndex("year"), Qt::Horizontal,
+							  "Year");
+	model->setHeaderData(model->fieldIndex("locked"), Qt::Horizontal,
+							  "Is it locked");
+	return model;
+}
+
+void SQLStorage::insertRowToDB(QSqlRelationalTableModel* model,int afterPos)
+{
+	model->insertRow(afterPos);
+}
