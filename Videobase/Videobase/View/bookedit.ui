@@ -89,6 +89,19 @@
       <string>Apply changes</string>
      </property>
     </widget>
+    <widget class="QCheckBox" name="checkBoxRentableToggle">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>50</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Show only rentable</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QTableView" name="TableDB">
     <property name="geometry">
