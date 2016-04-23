@@ -7,7 +7,7 @@
 
 namespace Implementation
 {
-	class bookEditImpl : public QWidget
+	class bookEditImpl : public QObject
 	{
 		Q_OBJECT;
 	public:
