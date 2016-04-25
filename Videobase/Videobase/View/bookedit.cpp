@@ -1,4 +1,5 @@
 ﻿#include "bookedit.h"
+#include "bookeditdelegate.h"
 bookEdit::bookEdit(QWidget * parent) : QWidget(parent), Impl(std::make_unique<Implementation::bookEditImpl>())
 {
 	ui.setupUi(this);
@@ -12,7 +13,7 @@ bookEdit::bookEdit(QWidget * parent) : QWidget(parent), Impl(std::make_unique<Im
 	connect(this, SIGNAL(sendRowIndexToBeDeleted(int)), Impl.get(), SLOT(deleteCurrentRow(int)));
 
 	ui.TableDB->setModel(Impl->tableModel.get());
-// 	ui.TableDB->setItemDelegate(new bookEditDelegate(this));
+ 	ui.TableDB->setItemDelegate(new bookEditDelegate(Impl->tableModel.get()->fieldIndex("locked"),this));
 	ui.TableDB->setColumnHidden(Impl->tableModel->fieldIndex("mov_id"), true);
 	ui.TableDB->setSelectionBehavior(QAbstractItemView::SelectRows);
 	ui.TableDB->setSortingEnabled(true);

@@ -26,7 +26,6 @@ std::unique_ptr<QSqlRelationalTableModel> SQLStorage::createSQLModel()
 std::unique_ptr<QSqlRelationalTableModel> SQLStorage::createBookeditModel()
 {
 	auto model = createSQLModel();
-	model->setEditStrategy(QSqlTableModel::OnManualSubmit);
 	model->setTable("movies");
 
 	model->select();
