@@ -23,7 +23,11 @@
       <height>471</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="controlLayout"/>
+    <layout class="QVBoxLayout" name="controlLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

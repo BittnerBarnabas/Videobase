@@ -1,5 +1,7 @@
 ﻿#include "mainwindow.h"
+#include <QMainWindow>
 #include <QDataWidgetMapper>
+#include <QLayout>
 #include "Implementation/databasehandler.h"
 #include "ui_mainwindow.h"
 
