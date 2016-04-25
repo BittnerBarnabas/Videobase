@@ -99,7 +99,20 @@
       </rect>
      </property>
      <property name="text">
-      <string>Show only rentable</string>
+      <string>Show rentable only</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBoxRentedToggle">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>30</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Show rented only</string>
      </property>
     </widget>
    </widget>

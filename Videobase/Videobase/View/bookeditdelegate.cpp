@@ -41,9 +41,11 @@ void bookEditDelegate::setModelData(QWidget * editor, QAbstractItemModel * model
 
 void bookEditDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index) const
 {
-	if (index.column() == lockedColumnN)
-	{
-		painter->drawText(option.rect.x(), option.rect.y(), "Yes");
-	}
-	QSqlRelationalDelegate::paint(painter, option, index);
+	if (index.column() != lockedColumnN)
+		QSqlRelationalDelegate::paint(painter, option, index);
+	else if (index.model()->data(index).toInt() == 1)
+		painter->drawText(option.rect.x(), option.rect.y() + 25, "Yes");
+	else
+		painter->drawText(option.rect.x(), option.rect.y() + 25, "No");
+
 }

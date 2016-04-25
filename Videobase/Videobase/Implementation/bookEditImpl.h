@@ -16,6 +16,7 @@ namespace Implementation
 		public slots:
 		void insertRowToEnd(); //!< Inserts a row to the end of the table
 		void toggleRentable(int state); //!< Toggles the display of only the rentable movies
+		void toggleRented(int state);
 		void deleteCurrentRow(int Ind);
 		void revertAll();
 		void submitAll();

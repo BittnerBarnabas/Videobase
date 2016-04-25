@@ -9,6 +9,7 @@ bookEdit::bookEdit(QWidget * parent) : QWidget(parent), Impl(std::make_unique<Im
 	connect(ui.buttonNewRow, SIGNAL(clicked()), Impl.get(), SLOT(insertRowToEnd()));
 	connect(ui.buttonDelRow, SIGNAL(clicked()), this, SLOT(deleteCurrentRow()));
 	connect(ui.checkBoxRentableToggle, SIGNAL(stateChanged(int)), Impl.get(), SLOT(toggleRentable(int)));
+	connect(ui.checkBoxRentedToggle, SIGNAL(stateChanged(int)), Impl.get(), SLOT(toggleRented(int)));
 	connect(ui.checkBoxRentableToggle, SIGNAL(stateChanged(int)), this, SLOT(toggleDeleteButton(int)));
 	connect(this, SIGNAL(sendRowIndexToBeDeleted(int)), Impl.get(), SLOT(deleteCurrentRow(int)));
 
