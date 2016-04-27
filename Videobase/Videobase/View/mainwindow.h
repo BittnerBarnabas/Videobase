@@ -2,6 +2,7 @@
 #include <QMainWindow>
 #include <QSqlRelationalTableModel>
 #include "View/MovieEdit.h"
+#include "View/rentalediting.h"
 #include <memory>
 namespace Ui {class MainWindow;}
 namespace View
@@ -13,10 +14,12 @@ namespace View
 	public:
 		MainWindow(QWidget * parent = Q_NULLPTR);
 		~MainWindow();
-		public slots:
+	public slots:
 		void editMovies();
+		void editRentals();
 	private:
 		std::unique_ptr<Ui::MainWindow> ui;
 		std::unique_ptr<MovieEdit> movieEditWidget;
+		std::unique_ptr<rentalEditing> rentalEditingWidget;
 	};
 }
