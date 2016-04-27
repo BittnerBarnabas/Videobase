@@ -23,12 +23,14 @@ namespace View
 	{
 		movieEditWidget.reset(nullptr);
 		rentalEditingWidget = std::make_unique<rentalEditing>();
-		ui->controlLayout->addWidget(rentalEditingWidget.get());
+		//ui->controlLayout->addWidget(rentalEditingWidget.get());
+		setCentralWidget(rentalEditingWidget.get());
 	}
 	
 	void MainWindow::editMovies() {
 		rentalEditingWidget.reset(nullptr);
 	  movieEditWidget = std::make_unique<MovieEdit>();
-	  ui->controlLayout->addWidget(movieEditWidget.get());
+	  setCentralWidget(movieEditWidget.get());
+	  //ui->controlLayout->addWidget(movieEditWidget.get());
 	}
 }
