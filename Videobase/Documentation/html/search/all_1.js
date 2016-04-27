@@ -1,11 +1,8 @@
 var searchData=
 [
   ['bookedit',['bookEdit',['../class_ui_1_1book_edit.html',1,'Ui']]],
-  ['bookeditdelegate',['bookEditDelegate',['../classbook_edit_delegate.html',1,'bookEditDelegate'],['../classbook_edit_delegate.html#a3e96d08a3d4d22a8d426457c121d44b4',1,'bookEditDelegate::bookEditDelegate()']]],
-  ['bookeditdelegate_2ecpp',['bookeditdelegate.cpp',['../bookeditdelegate_8cpp.html',1,'']]],
-  ['bookeditdelegate_2eh',['bookeditdelegate.h',['../bookeditdelegate_8h.html',1,'']]],
-  ['bookeditimpl',['bookEditImpl',['../class_implementation_1_1book_edit_impl.html#a9aeaba2828906abce4867058155a5c7b',1,'Implementation::bookEditImpl']]],
   ['bookeditimpl',['bookEditImpl',['../class_implementation_1_1book_edit_impl.html',1,'Implementation']]],
+  ['bookeditimpl',['bookEditImpl',['../class_implementation_1_1book_edit_impl.html#a9aeaba2828906abce4867058155a5c7b',1,'Implementation::bookEditImpl']]],
   ['bookeditimpl_2ecpp',['bookEditImpl.cpp',['../book_edit_impl_8cpp.html',1,'']]],
   ['bookeditimpl_2eh',['bookEditImpl.h',['../book_edit_impl_8h.html',1,'']]],
   ['buttondelrow',['buttonDelRow',['../class_ui__book_edit.html#a9e0968723ec0e5f4283cce8758b0139f',1,'Ui_bookEdit']]],

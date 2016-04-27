@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['paint',['paint',['../classbook_edit_delegate.html#a550171bdf2b47380d0a7c2304a815fac',1,'bookEditDelegate']]]
+  ['paint',['paint',['../class_view_1_1movie_edit_delegate.html#a6fb037fb2e207bcd3c4da6ab0466f629',1,'View::movieEditDelegate']]]
 ];
