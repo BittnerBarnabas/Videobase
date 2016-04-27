@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>924</width>
-    <height>638</height>
+    <width>823</width>
+    <height>430</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>bookEdit</string>
@@ -18,9 +24,15 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>721</width>
-     <height>411</height>
+     <width>821</width>
+     <height>421</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="title">
     <string>Movies</string>
@@ -30,8 +42,8 @@
      <rect>
       <x>10</x>
       <y>310</y>
-      <width>691</width>
-      <height>91</height>
+      <width>801</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="title">
@@ -66,7 +78,7 @@
     <widget class="QPushButton" name="buttonRevert">
      <property name="geometry">
       <rect>
-       <x>390</x>
+       <x>350</x>
        <y>50</y>
        <width>156</width>
        <height>28</height>
@@ -79,7 +91,7 @@
     <widget class="QPushButton" name="buttonSubmit">
      <property name="geometry">
       <rect>
-       <x>570</x>
+       <x>530</x>
        <y>50</y>
        <width>102</width>
        <height>28</height>
@@ -92,14 +104,27 @@
     <widget class="QCheckBox" name="checkBoxRentableToggle">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>50</y>
+       <x>180</x>
+       <y>60</y>
        <width>141</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Show only rentable</string>
+      <string>Show rentable only</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBoxRentedToggle">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>40</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Show rented only</string>
      </property>
     </widget>
    </widget>
@@ -108,9 +133,15 @@
      <rect>
       <x>10</x>
       <y>20</y>
-      <width>701</width>
+      <width>801</width>
       <height>291</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
    </widget>
   </widget>

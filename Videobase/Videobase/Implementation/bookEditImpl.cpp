@@ -14,6 +14,13 @@ namespace Implementation
 		tableModel->select();
 	}
 
+	void bookEditImpl::toggleRented(int state)
+	{
+		if (state) 	tableModel->setFilter("mov_id in(select mov_id from rentals where RET_DATE = '0000-00-00')");
+		else tableModel->setFilter("");
+		tableModel->select();
+	}
+
 	void bookEditImpl::deleteCurrentRow(int Ind)
 	{
 		tableModel->removeRow(Ind);
@@ -28,7 +35,7 @@ namespace Implementation
 	void bookEditImpl::submitAll()
 	{
 		if (!tableModel->submitAll())
-			QMessageBox::information(nullptr, "Couldn't insert row", tableModel->lastError().text());
+			QMessageBox::information(nullptr, "Couldn't submit changes", tableModel->lastError().text());
 
 	}
 }
