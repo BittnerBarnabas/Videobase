@@ -35,7 +35,7 @@ namespace Implementation
 	void bookEditImpl::submitAll()
 	{
 		if (!tableModel->submitAll())
-			QMessageBox::information(nullptr, "Couldn't insert row", tableModel->lastError().text());
+			QMessageBox::information(nullptr, "Couldn't submit changes", tableModel->lastError().text());
 
 	}
 }
