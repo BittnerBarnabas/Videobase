@@ -4,6 +4,7 @@
 #include <memory>
 #include "Implementation/rentaleditimpl.h"
 #include "ui_rentalediting.h"
+#include "rentaleditingdelegate.h"
 
 namespace View
 {

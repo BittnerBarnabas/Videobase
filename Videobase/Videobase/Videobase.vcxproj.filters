@@ -117,6 +117,15 @@
     <ClCompile Include="Implementation\rentaleditimpl.cpp">
       <Filter>Implementation\Source</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_rentaleditingdelegate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_rentaleditingdelegate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\rentaleditingdelegate.cpp">
+      <Filter>View\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Implementation\databasehandler.h">
@@ -159,6 +168,9 @@
     </CustomBuild>
     <CustomBuild Include="Implementation\rentaleditimpl.h">
       <Filter>Implementation\Header</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\rentaleditingdelegate.h">
+      <Filter>View\Header</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>
