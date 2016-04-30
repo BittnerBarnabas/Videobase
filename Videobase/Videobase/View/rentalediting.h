@@ -9,16 +9,31 @@
 #include "ui_rentalediting.h"
 
 namespace View {
+	/*!
+	 * \class rentalEditing
+	 *
+	 * \brief Provides the interface for displaying and editing the rentals. 
+	 *
+	 * \author barni
+	 *
+	 * \version 1.0
+	 *
+	 * \date April 2016
+	 *
+	 *
+	 *
+	 */
 class rentalEditing : public QWidget {
   Q_OBJECT
 
  public:
   rentalEditing(QWidget* parent = Q_NULLPTR);
   ~rentalEditing();
-  void setUpTableView();
 
  private:
-  std::unique_ptr<Implementation::rentalEditImpl> Model;
+  void setUpTableView();  //!< Sets up the initial view
+  std::unique_ptr<Implementation::rentalEditImpl>
+      Model;  //!< Stores the model of this view
   Ui::rentalEditing ui;
 };
 }
