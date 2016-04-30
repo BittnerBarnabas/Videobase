@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <QObject>
 #include <QSqlRelationalTableModel>
+#include <QDate>
 #include <memory>
 #include "databasehandler.h"
 
@@ -14,5 +15,7 @@ class rentalEditImpl : public QObject {
   ~rentalEditImpl();
  public slots:
   void insertRowToEnd();
+private:
+	QString currentDateToString();
 };
 }
