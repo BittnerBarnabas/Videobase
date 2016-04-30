@@ -35,6 +35,65 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="newRentalButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>251</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add new rental</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="movieTitleCombo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>251</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="memberNameCombo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>251</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="revertButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>111</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Revert changes</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="applyButton">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>330</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Apply changes</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

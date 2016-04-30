@@ -2,7 +2,7 @@
 
 void SQLStorage::createSqlConnection()
 {
-	QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+	auto db = QSqlDatabase::addDatabase("QMYSQL");
 	db.setHostName("localhost");
 	db.setDatabaseName("videobase");
 	db.setUserName("barni");
