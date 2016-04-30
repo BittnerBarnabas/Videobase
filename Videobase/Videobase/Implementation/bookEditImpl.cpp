@@ -16,7 +16,7 @@ namespace Implementation
 
 	void bookEditImpl::toggleRented(int state)
 	{
-		if (state) 	tableModel->setFilter("mov_id in(select mov_id from rentals where RET_DATE = '0000-00-00')");
+		if (state) 	tableModel->setFilter("mov_id in(select mov_id from rentals where RET_DATE = '2001-01-01')");
 		else tableModel->setFilter("");
 		tableModel->select();
 	}
