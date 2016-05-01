@@ -9,8 +9,8 @@ QString rentalEditImpl::currentDateToString() {
   int Y = currD.year();
   int M = currD.month();
   int D = currD.day();
-  return QString(QString::number(M) + "/" + QString::number(D) + "/" +
-                 QString::number(Y));
+  return QString(QString::number(Y) + "-" + QString::number(M) + "-" +
+                 QString::number(D));
 }
 
 void rentalEditImpl::insertRowToEnd() {

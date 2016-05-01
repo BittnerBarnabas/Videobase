@@ -8,13 +8,14 @@ rentalEditing::rentalEditing(QWidget* parent)
   setUpTableView();
   connect(ui.newRentalButton, SIGNAL(clicked()), Model.get(),
           SLOT(insertRowToEnd()));
-  connect(ui.applyButton, SIGNAL(clicked()), Model->tableModel.get(), SLOT(submitAll()));
+  connect(ui.applyButton, SIGNAL(clicked()), this, SLOT(submitAll()));
   connect(ui.revertButton, SIGNAL(clicked()), Model->tableModel.get(), SLOT(revertAll()));
 }
 
 rentalEditing::~rentalEditing() {}
 void rentalEditing::setUpTableView() {
   auto TableViewModel = Model->tableModel.get();
+
   ui.rentalsTableView->setModel(TableViewModel);
   ui.rentalsTableView->setColumnHidden(Model->tableModel->fieldIndex("rent_id"),
                                        true);
@@ -24,7 +25,11 @@ void rentalEditing::setUpTableView() {
   ui.rentalsTableView->setSelectionBehavior(QAbstractItemView::SelectRows);
 
 
-  setUpMovieTitleEditCombo();
+  //setUpMovieTitleEditCombo();
+  ui.movieTitleCombo->setModel(TableViewModel->relationModel(2));
+  ui.memberNameCombo->setModelColumn(
+	  TableViewModel->relationModel(2)->fieldIndex("title"));
+
   ui.memberNameCombo->setModel(TableViewModel->relationModel(1));
   ui.memberNameCombo->setModelColumn(
       TableViewModel->relationModel(1)->fieldIndex("name"));
@@ -34,6 +39,7 @@ void rentalEditing::setUpTableView() {
   WidgetMapper->setItemDelegate(new rentalEditingDelegate(
       ui.rentalsTableView, TableViewModel->fieldIndex("ret_date")));
   WidgetMapper->addMapping(ui.memberNameCombo, 1);
+  WidgetMapper->addMapping(ui.movieTitleCombo, 2);
 
   connect(ui.rentalsTableView->selectionModel(),
           SIGNAL(currentRowChanged(QModelIndex, QModelIndex)), WidgetMapper,
@@ -47,6 +53,17 @@ void rentalEditing::setUpMovieTitleEditCombo()
 	while (query.next())
 	{
 		ui.movieTitleCombo->addItem(query.value(0).toString());
+	}
+}
+
+void rentalEditing::submitAll()
+{
+	if (!Model->tableModel->submitAll())
+	{
+		QMessageBox msgBox;
+		msgBox.setText(Model->tableModel->lastError().text());
+		msgBox.exec();
+		
 	}
 }
 }

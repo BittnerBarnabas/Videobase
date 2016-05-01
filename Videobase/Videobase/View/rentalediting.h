@@ -30,10 +30,11 @@ class rentalEditing : public QWidget {
  public:
   rentalEditing(QWidget* parent = Q_NULLPTR);
   ~rentalEditing();
-
+  public slots:
+  void submitAll();
  private:
   void setUpTableView();  //!< Sets up the initial view
-  void setUpMovieTitleEditCombo();
+  void setUpMovieTitleEditCombo(); //!< Sets up the Title editing combobox
   std::unique_ptr<Implementation::rentalEditImpl>
       Model;  //!< Stores the model of this view
   Ui::rentalEditing ui;
