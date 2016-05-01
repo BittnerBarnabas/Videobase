@@ -45,11 +45,33 @@ namespace View
 	void movieEditDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index) const
 	{
 		if (index.column() != lockedColumnN)
+		{
 			QSqlRelationalDelegate::paint(painter, option, index);
-		else if (index.model()->data(index).toInt() == 1)
+			return;
+		}
+
+		if (option.state & QStyle::State_Selected)
+		{
+			if (option.state & QStyle::State_Active)
+			{
+				painter->fillRect(option.rect, option.palette.highlight().color());
+				painter->setPen(Qt::white);
+			}
+			else
+			{
+				painter->setPen(Qt::black);
+				QPalette p = option.palette;
+				painter->fillRect(option.rect,
+								  p.color(QPalette::Inactive, QPalette::Background));
+			}
+		}
+
+		if (index.model()->data(index).toInt() == 1)
 			painter->drawText(option.rect.x(), option.rect.y() + 25, "Yes");
 		else
 			painter->drawText(option.rect.x(), option.rect.y() + 25, "No");
 	
+		painter->setPen(Qt::black);
+
 	}
 }
