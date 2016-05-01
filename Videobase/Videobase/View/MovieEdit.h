@@ -41,6 +41,6 @@ namespace View
 		void sendRowIndexToBeDeleted(int ind); //!< This is sent by @deleteCurrentRow
 	private:
 		Ui::bookEdit ui; //!< Contains the additional UI of the class
-		std::unique_ptr<Implementation::bookEditImpl> Impl; //!< QT model for storing SQL information
+		std::unique_ptr<Implementation::bookEditImpl> Model; //!< QT model for storing SQL information
 	};
 }

@@ -2,7 +2,7 @@
 
 void SQLStorage::createSqlConnection()
 {
-	QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+	auto db = QSqlDatabase::addDatabase("QMYSQL");
 	db.setHostName("localhost");
 	db.setDatabaseName("videobase");
 	db.setUserName("barni");
@@ -28,7 +28,6 @@ std::unique_ptr<QSqlRelationalTableModel> SQLStorage::createBookeditModel()
 	auto model = createSQLModel();
 	model->setTable("movies");
 
-	model->select();
 	model->setHeaderData(model->fieldIndex("title"), Qt::Horizontal,
 							  "Title");
 	model->setHeaderData(model->fieldIndex("main_char"), Qt::Horizontal,
@@ -41,10 +40,25 @@ std::unique_ptr<QSqlRelationalTableModel> SQLStorage::createBookeditModel()
 							  "Year");
 	model->setHeaderData(model->fieldIndex("locked"), Qt::Horizontal,
 							  "Is it locked");
+
+	model->select();
 	return model;
 }
 
-void SQLStorage::insertRowToDB(QSqlRelationalTableModel* model,int afterPos)
+std::unique_ptr<QSqlRelationalTableModel> SQLStorage::createRentalEditModel()
 {
-	model->insertRow(afterPos);
+	auto model = createSQLModel();
+	model->setTable("rentals");
+	model->setRelation(model->fieldIndex("mov_id"), QSqlRelation("movies", "mov_id", "title"));
+	model->setRelation(model->fieldIndex("mem_id"), QSqlRelation("members", "mem_id", "name"));
+
+	model->setHeaderData(model->fieldIndex("mov_id"), Qt::Horizontal, "Movie title");
+	model->setHeaderData(model->fieldIndex("mem_id"), Qt::Horizontal, "Member name");
+	model->setHeaderData(model->fieldIndex("rent_date"), Qt::Horizontal, "Rental date");
+	model->setHeaderData(model->fieldIndex("ret_date"), Qt::Horizontal, "Return date");
+
+	model->select();
+
+	return model;
+	
 }

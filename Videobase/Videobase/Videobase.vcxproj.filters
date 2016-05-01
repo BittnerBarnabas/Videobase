@@ -99,6 +99,33 @@
     <ClCompile Include="View\movieEditDelegate.cpp">
       <Filter>View\Source</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_rentalediting.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_rentalediting.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\rentalediting.cpp">
+      <Filter>View\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_rentaleditimpl.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_rentaleditimpl.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Implementation\rentaleditimpl.cpp">
+      <Filter>Implementation\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_rentaleditingdelegate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_rentaleditingdelegate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="View\rentaleditingdelegate.cpp">
+      <Filter>View\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Implementation\databasehandler.h">
@@ -108,6 +135,9 @@
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_bookedit.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_rentalediting.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -128,6 +158,18 @@
       <Filter>View\Header</Filter>
     </CustomBuild>
     <CustomBuild Include="View\movieEditDelegate.h">
+      <Filter>View\Header</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\rentalediting.ui">
+      <Filter>View\Forms</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\rentalediting.h">
+      <Filter>View\Header</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Implementation\rentaleditimpl.h">
+      <Filter>Implementation\Header</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\rentaleditingdelegate.h">
       <Filter>View\Header</Filter>
     </CustomBuild>
   </ItemGroup>
