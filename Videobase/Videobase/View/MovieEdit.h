@@ -6,7 +6,7 @@
 #include <QSqlRelationalTableModel>
 #include <QDataWidgetMapper>
 #include "Implementation/databasehandler.h"
-#include "Implementation/bookEditImpl.h"
+#include "Implementation/movieEditImpl.h"
 namespace View
 {
 /*!
@@ -41,6 +41,6 @@ namespace View
 		void sendRowIndexToBeDeleted(int ind); //!< This is sent by @deleteCurrentRow
 	private:
 		Ui::bookEdit ui; //!< Contains the additional UI of the class
-		std::unique_ptr<Implementation::bookEditImpl> Model; //!< QT model for storing SQL information
+		std::unique_ptr<Implementation::movieEditImpl> Model; //!< QT model for storing SQL information
 	};
 }

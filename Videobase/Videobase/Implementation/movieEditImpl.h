@@ -7,12 +7,12 @@
 
 namespace Implementation
 {
-	class bookEditImpl : public QObject
+	class movieEditImpl : public QObject
 	{
 		Q_OBJECT;
 	public:
 		std::unique_ptr<QSqlRelationalTableModel> tableModel; //!< QT model for connecting SQL and View
-		bookEditImpl() : tableModel(SQLStorage::createBookeditModel()){}
+		movieEditImpl() : tableModel(SQLStorage::createBookeditModel()){}
 		public slots:
 		void insertRowToEnd(); //!< Inserts a row to the end of the table
 		void toggleRentable(int state); //!< Toggles the display of only the rentable movies
