@@ -16,7 +16,6 @@ rentalEditing::rentalEditing(QWidget* parent)
   connect(this, SIGNAL(titleFromCombobox(int, int)), Model.get(),
           SLOT(updateTitle(int, int)));
 }
-
 rentalEditing::~rentalEditing() {}
 void rentalEditing::sendTitleFromCombobox(int ind) {
   int mov_id = ui.movieTitleCombo->itemData(ind).toInt();
@@ -63,7 +62,6 @@ void rentalEditing::setUpMovieTitleEditCombo() {
                                 rentableQuery.value(1).toInt());
   }
 }
-
 void rentalEditing::submitAll() {
   if (!Model->tableModel->submitAll()) {
     QMessageBox msgBox;

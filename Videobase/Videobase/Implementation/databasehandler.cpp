@@ -62,8 +62,3 @@ std::unique_ptr<QSqlRelationalTableModel> SQLStorage::createRentalEditModel()
 	return model;
 	
 }
-
-void SQLStorage::insertRowToDB(QSqlRelationalTableModel* model,int afterPos)
-{
-	model->insertRow(afterPos);
-}
