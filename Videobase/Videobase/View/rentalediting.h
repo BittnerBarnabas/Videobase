@@ -3,6 +3,7 @@
 #include <QDataWidgetMapper>
 #include <QTableView>
 #include <QWidget>
+#include <QSqlQuery>
 #include <memory>
 #include "Implementation/rentaleditimpl.h"
 #include "rentaleditingdelegate.h"
@@ -32,6 +33,7 @@ class rentalEditing : public QWidget {
 
  private:
   void setUpTableView();  //!< Sets up the initial view
+  void setUpMovieTitleEditCombo();
   std::unique_ptr<Implementation::rentalEditImpl>
       Model;  //!< Stores the model of this view
   Ui::rentalEditing ui;

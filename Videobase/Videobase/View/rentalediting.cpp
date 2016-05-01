@@ -23,10 +23,8 @@ void rentalEditing::setUpTableView() {
   ui.rentalsTableView->setSelectionMode(QAbstractItemView::SingleSelection);
   ui.rentalsTableView->setSelectionBehavior(QAbstractItemView::SelectRows);
 
-  ui.movieTitleCombo->setModel(TableViewModel->relationModel(2));
-  ui.movieTitleCombo->setModelColumn(
-      TableViewModel->relationModel(2)->fieldIndex("title"));
 
+  setUpMovieTitleEditCombo();
   ui.memberNameCombo->setModel(TableViewModel->relationModel(1));
   ui.memberNameCombo->setModelColumn(
       TableViewModel->relationModel(1)->fieldIndex("name"));
@@ -35,12 +33,20 @@ void rentalEditing::setUpTableView() {
   WidgetMapper->setModel(TableViewModel);
   WidgetMapper->setItemDelegate(new rentalEditingDelegate(
       ui.rentalsTableView, TableViewModel->fieldIndex("ret_date")));
-  WidgetMapper->addMapping(ui.movieTitleCombo, 2);
   WidgetMapper->addMapping(ui.memberNameCombo, 1);
 
   connect(ui.rentalsTableView->selectionModel(),
           SIGNAL(currentRowChanged(QModelIndex, QModelIndex)), WidgetMapper,
           SLOT(setCurrentModelIndex(QModelIndex)));
   ui.rentalsTableView->setCurrentIndex(TableViewModel->index(0, 0));
+}
+void rentalEditing::setUpMovieTitleEditCombo()
+{
+	QSqlQuery query("SELECT title FROM movies WHERE locked IS false AND mov_id NOT IN (SELECT mov_id FROM rentals WHERE ret_date  = '2001-01-01')");
+	query.setForwardOnly(true);
+	while (query.next())
+	{
+		ui.movieTitleCombo->addItem(query.value(0).toString());
+	}
 }
 }
