@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include <QWidget>
-#include "ui_bookedit.h"
+#include "ui_movieedit.h"
 #include <memory>
 #include <QSql>
 #include <QSqlRelationalTableModel>
@@ -40,7 +40,7 @@ namespace View
 	signals:
 		void sendRowIndexToBeDeleted(int ind); //!< This is sent by @deleteCurrentRow
 	private:
-		Ui::bookEdit ui; //!< Contains the additional UI of the class
+		Ui::movieEdit ui; //!< Contains the additional UI of the class
 		std::unique_ptr<Implementation::movieEditImpl> Model; //!< QT model for storing SQL information
 	};
 }

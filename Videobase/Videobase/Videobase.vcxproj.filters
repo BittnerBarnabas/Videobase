@@ -134,10 +134,10 @@
     <ClInclude Include="GeneratedFiles\ui_mainwindow.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_bookedit.h">
+    <ClInclude Include="GeneratedFiles\ui_rentalediting.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_rentalediting.h">
+    <ClInclude Include="GeneratedFiles\ui_movieedit.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -146,9 +146,6 @@
       <Filter>View\Header</Filter>
     </CustomBuild>
     <CustomBuild Include="View\mainwindow.ui">
-      <Filter>View\Forms</Filter>
-    </CustomBuild>
-    <CustomBuild Include="View\bookedit.ui">
       <Filter>View\Forms</Filter>
     </CustomBuild>
     <CustomBuild Include="View\MovieEdit.h">
@@ -171,6 +168,9 @@
     </CustomBuild>
     <CustomBuild Include="Implementation\movieEditImpl.h">
       <Filter>Implementation\Header</Filter>
+    </CustomBuild>
+    <CustomBuild Include="View\movieedit.ui">
+      <Filter>View\Forms</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>
