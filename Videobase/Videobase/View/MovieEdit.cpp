@@ -2,7 +2,7 @@
 #include "movieEditDelegate.h"
 namespace View
 {
-	MovieEdit::MovieEdit(QWidget * parent) : QWidget(parent), Impl(std::make_unique<Implementation::bookEditImpl>())
+	MovieEdit::MovieEdit(QWidget * parent) : QWidget(parent), Impl(std::make_unique<Implementation::movieEditImpl>())
 	{
 		ui.setupUi(this);
 	

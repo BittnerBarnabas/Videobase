@@ -72,15 +72,6 @@
     <ClCompile Include="View\mainwindow.cpp">
       <Filter>View\Source</Filter>
     </ClCompile>
-    <ClCompile Include="Implementation\bookEditImpl.cpp">
-      <Filter>Implementation\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_bookEditImpl.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_bookEditImpl.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_MovieEdit.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
@@ -98,6 +89,15 @@
     </ClCompile>
     <ClCompile Include="View\movieEditDelegate.cpp">
       <Filter>View\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_movieEditImpl.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_movieEditImpl.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Implementation\movieEditImpl.cpp">
+      <Filter>Implementation\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -121,14 +121,14 @@
     <CustomBuild Include="View\bookedit.ui">
       <Filter>View\Forms</Filter>
     </CustomBuild>
-    <CustomBuild Include="Implementation\bookEditImpl.h">
-      <Filter>Implementation\Header</Filter>
-    </CustomBuild>
     <CustomBuild Include="View\MovieEdit.h">
       <Filter>View\Header</Filter>
     </CustomBuild>
     <CustomBuild Include="View\movieEditDelegate.h">
       <Filter>View\Header</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Implementation\movieEditImpl.h">
+      <Filter>Implementation\Header</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>
