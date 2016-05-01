@@ -32,12 +32,14 @@ class rentalEditing : public QWidget {
   ~rentalEditing();
  signals:
   void titleFromCombobox(int rowNum, int movId);
+  void returnMovieInRow(int rowNum);
  public slots:
   void submitAll();  //!< Submits the changes, displays messagebox if there were
                      //!an error
   void sendTitleFromCombobox(int ind);  //!< Helper function to send the
                                         //!currently selected movie id from the
                                         //!title editing combobox
+  void sendReturnMovieInRow();
  private:
   void setUpTableView();            //!< Sets up the initial view
   void setUpMovieTitleEditCombo();  //!< Sets up the Title editing combobox

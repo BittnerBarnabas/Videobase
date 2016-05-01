@@ -15,15 +15,33 @@ rentalEditing::rentalEditing(QWidget* parent)
           SLOT(sendTitleFromCombobox(int)));
   connect(this, SIGNAL(titleFromCombobox(int, int)), Model.get(),
           SLOT(updateTitle(int, int)));
+  connect(ui.returnButton, SIGNAL(clicked()), this,
+          SLOT(sendReturnMovieInRow()));
+  connect(this, SIGNAL(returnMovieInRow(int)), Model.get(),
+          SLOT(returnMovie(int)));
 }
 rentalEditing::~rentalEditing() {}
 void rentalEditing::sendTitleFromCombobox(int ind) {
   int mov_id = ui.movieTitleCombo->itemData(ind).toInt();
   emit titleFromCombobox(ui.rentalsTableView->currentIndex().row(), mov_id);
 }
+void rentalEditing::sendReturnMovieInRow() {
+  emit returnMovieInRow(ui.rentalsTableView->currentIndex().row());
+
+  auto DateIndex = Model->tableModel->index(ui.rentalsTableView->currentIndex().row(), 3);
+  auto d = Model->tableModel->data(DateIndex).toDate();
+  if (d.daysTo(QDate::currentDate()) >= 1)
+  {
+	  ui.moneyLabel->setText("1000 HUF");
+  }
+  else
+  {
+	  ui.moneyLabel->setText("0 HUF");
+  }
+}
 void rentalEditing::setUpTableView() {
   auto TableViewModel = Model->tableModel.get();
-  //setting up the model, and delegates
+  // setting up the model, and delegates
   ui.rentalsTableView->setModel(TableViewModel);
   ui.rentalsTableView->setColumnHidden(Model->tableModel->fieldIndex("rent_id"),
                                        true);
@@ -33,11 +51,11 @@ void rentalEditing::setUpTableView() {
   ui.rentalsTableView->setSelectionBehavior(QAbstractItemView::SelectRows);
 
   setUpMovieTitleEditCombo();
-  //setting up other combos with model
+  // setting up other combos with model
   ui.memberNameCombo->setModel(TableViewModel->relationModel(1));
   ui.memberNameCombo->setModelColumn(
       TableViewModel->relationModel(1)->fieldIndex("name"));
-  //adding connection between combos and model
+  // adding connection between combos and model
   auto* WidgetMapper = new QDataWidgetMapper(this);
   WidgetMapper->setModel(TableViewModel);
   WidgetMapper->setItemDelegate(new rentalEditingDelegate(

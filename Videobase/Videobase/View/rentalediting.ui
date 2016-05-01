@@ -99,7 +99,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="moneLabel">
+        <widget class="QLabel" name="moneyLabel">
          <property name="palette">
           <palette>
            <active>
@@ -154,6 +154,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
