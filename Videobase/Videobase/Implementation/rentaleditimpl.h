@@ -15,6 +15,7 @@ class rentalEditImpl : public QObject {
   ~rentalEditImpl();
  public slots:
   void insertRowToEnd();
+  void updateTitle(int rowNum, int movId);
 private:
 	QString currentDateToString();
 };

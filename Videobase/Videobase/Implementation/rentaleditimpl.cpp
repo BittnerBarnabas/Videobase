@@ -4,6 +4,11 @@ namespace Implementation {
 
 rentalEditImpl::~rentalEditImpl() {}
 
+void rentalEditImpl::updateTitle(int rowNum, int movId)
+{
+	tableModel->setData(tableModel->index(rowNum, 2), movId);
+}
+
 QString rentalEditImpl::currentDateToString() {
   auto currD = QDate::currentDate();
   int Y = currD.year();
