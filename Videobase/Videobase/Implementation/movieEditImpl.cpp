@@ -9,7 +9,7 @@ namespace Implementation
 
 	void movieEditImpl::toggleRentable(int state)
 	{
-		if (state) 	tableModel->setFilter("mov_id not in(select mov_id from rentals where RET_DATE = '0000-00-00') and locked is false");
+		if (state) 	tableModel->setFilter("mov_id not in(select mov_id from rentals where RET_DATE = '2001-01-01') and locked is false");
 		else tableModel->setFilter("");
 		tableModel->select();
 	}
