@@ -13,6 +13,7 @@ namespace View
 	  movieEditWidget = nullptr;
 	
 	  ui->setupUi(this);
+	  ui->groupBox->setLayout(ui->verticalLayout);
 	  connect(ui->actionView_Movies, SIGNAL(triggered()), this, SLOT(editMovies()));
 	  connect(ui->actionView_Rentals, SIGNAL(triggered()), this, SLOT(editRentals()));
 	}
