@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['createbookeditmodel',['createBookeditModel',['../namespace_s_q_l_storage.html#a3e090ce4af809b7ad9086348ccc96dbf',1,'SQLStorage']]],
-  ['createeditor',['createEditor',['../class_view_1_1movie_edit_delegate.html#a72e46013a1ab66c10a1b2b3d9552dabb',1,'View::movieEditDelegate']]],
-  ['createsqlconnection',['createSqlConnection',['../namespace_s_q_l_storage.html#af718ec7633ee383f8dd8f25956b7f8fa',1,'SQLStorage']]],
-  ['createsqlmodel',['createSQLModel',['../namespace_s_q_l_storage.html#a39f7e5af17903576b3b954cd5f7cb924',1,'SQLStorage']]]
+  ['deletecurrentrow',['deleteCurrentRow',['../class_implementation_1_1movie_edit_impl.html#ae9da99caf4e1ebf1d94e48aadce2cc83',1,'Implementation::movieEditImpl::deleteCurrentRow()'],['../class_view_1_1_movie_edit.html#a5068dbbef7d44b24e03ef599ebd29977',1,'View::MovieEdit::deleteCurrentRow()']]]
 ];

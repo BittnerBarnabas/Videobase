@@ -11,5 +11,13 @@ var dir_f2ee84e8e3a17eaa7015d788fa443c27 =
     [ "movieEditDelegate.cpp", "movie_edit_delegate_8cpp.html", null ],
     [ "movieEditDelegate.h", "movie_edit_delegate_8h.html", [
       [ "movieEditDelegate", "class_view_1_1movie_edit_delegate.html", "class_view_1_1movie_edit_delegate" ]
+    ] ],
+    [ "rentalediting.cpp", "rentalediting_8cpp.html", null ],
+    [ "rentalediting.h", "rentalediting_8h.html", [
+      [ "rentalEditing", "class_view_1_1rental_editing.html", "class_view_1_1rental_editing" ]
+    ] ],
+    [ "rentaleditingdelegate.cpp", "rentaleditingdelegate_8cpp.html", null ],
+    [ "rentaleditingdelegate.h", "rentaleditingdelegate_8h.html", [
+      [ "rentalEditingDelegate", "class_view_1_1rental_editing_delegate.html", "class_view_1_1rental_editing_delegate" ]
     ] ]
 ];

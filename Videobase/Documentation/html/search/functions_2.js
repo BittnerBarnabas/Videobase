@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['deletecurrentrow',['deleteCurrentRow',['../class_implementation_1_1book_edit_impl.html#a332027b38ed78a1a481f9bb1e4cc2155',1,'Implementation::bookEditImpl::deleteCurrentRow()'],['../class_view_1_1_movie_edit.html#a5068dbbef7d44b24e03ef599ebd29977',1,'View::MovieEdit::deleteCurrentRow()']]]
+  ['editmovies',['editMovies',['../class_view_1_1_main_window.html#a1087d390f72ce361bd72c393837afb16',1,'View::MainWindow']]],
+  ['editrentals',['editRentals',['../class_view_1_1_main_window.html#a29cf1c84ea76afd6ba07513ad635879d',1,'View::MainWindow']]]
 ];
