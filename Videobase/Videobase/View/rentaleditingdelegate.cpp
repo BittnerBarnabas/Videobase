@@ -28,9 +28,9 @@ void rentalEditingDelegate::paint(QPainter* painter,
   }
   QSqlRelationalDelegate::paint(painter, option, index);
 }
-QWidget* rentalEditingDelegate::createEditor(QWidget* aParent,
-                                             const QStyleOptionViewItem& option,
-                                             const QModelIndex& index) const {
+QWidget* rentalEditingDelegate::createEditor(QWidget* /*aParent*/,
+                                             const QStyleOptionViewItem& /*option*/,
+                                             const QModelIndex& /*index*/) const {
   return nullptr;
 }
 }

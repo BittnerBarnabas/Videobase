@@ -73,7 +73,6 @@ void rentalEditing::setUpMovieTitleEditCombo() {
       "(SELECT mov_id FROM rentals WHERE ret_date  = '2001-01-01') order by "
       "title");
   rentableQuery.setForwardOnly(true);
-  int i = 1;
   while (rentableQuery.next()) {
     // storing the title and the index
     ui.movieTitleCombo->addItem(rentableQuery.value(0).toString(),
