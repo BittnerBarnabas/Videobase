@@ -38,7 +38,7 @@ namespace View
 		void deleteCurrentRow(); //!< Slot to signal the deletion of the currently selected row
 		void toggleDeleteButton(int state); //!< Enables/disables the delete button
 	signals:
-		void sendRowIndexToBeDeleted(int ind); //!< This is sent by @deleteCurrentRow
+		void sendRowIndexToBeDeleted(int ind); //!< This is sent by deleteCurrentRow
 	private:
 		Ui::movieEdit ui; //!< Contains the additional UI of the class
 		std::unique_ptr<Implementation::movieEditImpl> Model; //!< QT model for storing SQL information
