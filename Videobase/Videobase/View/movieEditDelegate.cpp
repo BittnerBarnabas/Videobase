@@ -3,7 +3,7 @@
 
 namespace View
 {	
-	movieEditDelegate::movieEditDelegate(int lockedColumnN,QObject *parent)
+	movieEditDelegate::movieEditDelegate(int lockedColumnN, bool initLock ,QObject *parent)
 		: QSqlRelationalDelegate(parent),lockedColumnN(lockedColumnN)
 	{
 	
@@ -18,6 +18,8 @@ namespace View
 	{
 		if (index.column() == lockedColumnN)
 		{
+			if (modableLock) return nullptr;
+
 			auto* lockingSelector = new QComboBox(parent);
 			lockingSelector->addItem("No", 0);
 			lockingSelector->addItem("Yes", 1);

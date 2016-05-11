@@ -11,16 +11,21 @@ namespace View
 	{
 		Q_OBJECT
 	public:
-		movieEditDelegate(int lockedColumnN,QObject *parent = Q_NULLPTR);
+		movieEditDelegate(int lockedColumnN, bool initLock = false , QObject *parent = Q_NULLPTR);
 		~movieEditDelegate();
 		QWidget* createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 		void setEditorData(QWidget *editor, const QModelIndex &index) const override;
 		void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override;
 		void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 	
+		public slots:
+		void toggleLocked()
+		{
+			modableLock = !modableLock;
+		}
 	
 	private:
-		//mutable QComboBox* lockingSelector;
+		bool modableLock;
 		int lockedColumnN;
 	};
 }

@@ -38,6 +38,8 @@ namespace View
 	void MovieEdit::toggleDeleteButton(int state)
 	{
 		ui.buttonDelRow->setEnabled(state);
+		dynamic_cast<movieEditDelegate*>(ui.TableDB->itemDelegate())->toggleLocked();
+
 	}
 }
 
